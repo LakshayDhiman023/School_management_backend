@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "a0d5c1c2-8b10-4c85-a8a4-e98654321876",
+		"name": "School Management API",
+		"description": "A collection to test the School Management API endpoints.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add School",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Example School\",\n    \"address\": \"123 Main Street, City, Country\",\n    \"latitude\": 12.345678,\n    \"longitude\": 98.765432\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/schools",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"schools"
+					]
+				},
+				"description": "Add a new school to the database"
+			},
+			"response": []
+		},
+		{
+			"name": "List Schools By Proximity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/schools?latitude=12.34&longitude=98.76",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"schools"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "12.34"
+						},
+						{
+							"key": "longitude",
+							"value": "98.76"
+						}
+					]
+				},
+				"description": "Get a list of schools sorted by proximity to the given coordinates"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+} 

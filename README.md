@@ -19,8 +19,8 @@ A Node.js API for managing school data with Express.js framework and MySQL datab
 
 1. Clone the repository:
    ```
-   git clone <repository-url>
-   cd school-management-api
+   git clone https://github.com/LakshayDhiman023/School_management_backend
+   cd School_management_backend
    ```
 
 2. Install dependencies:
@@ -119,8 +119,7 @@ A Node.js API for managing school data with Express.js framework and MySQL datab
 
 ## Postman Collection
 
-A Postman collection for testing the API is available at:
-[School Management API Collection](https://www.postman.com/your-collection-link)
+A Postman collection for testing the API is available in the directory.
 
 ## Deployment
 
